@@ -111,6 +111,12 @@
     [viewController presentViewController:cropViewController animated:YES completion:^{}];
 }
 
+- (void)cropViewController:(TOCropViewController *)cropViewController didFinishCancelled:(BOOL)cancelled {
+    if (cancelled == NO) {
+        self.onCancel()
+    }
+}
+
 - (void)cropViewController:(TOCropViewController *)cropViewController didCropToImage:(UIImage *)image withRect:(CGRect)cropRect angle:(NSInteger)angle {
     NSMutableDictionary* response = [NSMutableDictionary dictionary];
     NSData *croppedImageData = UIImageJPEGRepresentation(image, self.quality);

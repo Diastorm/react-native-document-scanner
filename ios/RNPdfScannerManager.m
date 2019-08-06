@@ -18,6 +18,7 @@ RCT_EXPORT_MODULE()
 RCT_EXPORT_VIEW_PROPERTY(onPictureTaken, RCTBubblingEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(onRectangleDetect, RCTBubblingEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(onCrop, RCTBubblingEventBlock)
+RCT_EXPORT_VIEW_PROPERTY(onCancel, RCTBubblingEventBlock)
 
 
 RCT_EXPORT_VIEW_PROPERTY(overlayColor, UIColor)
