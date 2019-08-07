@@ -18,4 +18,6 @@
 
 - (void) capture;
 
+- (void) cleanup;
+
 @end

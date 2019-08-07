@@ -35,6 +35,9 @@ RCT_EXPORT_VIEW_PROPERTY(brightness, float)
 RCT_EXPORT_VIEW_PROPERTY(contrast, float)
 RCT_EXPORT_VIEW_PROPERTY(cropperOpts, NSDictionary)
 
+RCT_EXPORT_METHOD(cleanup) {
+    [_scannerView cleanup];
+}
 RCT_EXPORT_METHOD(capture) {
     
     [_scannerView capture];

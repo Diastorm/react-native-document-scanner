@@ -34,6 +34,10 @@
     }
 }
 
+- (void) cleanup {
+    [self stop];
+}
+
 - (void) capture {
     [self captureImageWithCompletionHander:^(UIImage *croppedImage, UIImage *initialImage, CIRectangleFeature *rectangleFeature) {
         if (self.onPictureTaken) {
@@ -84,9 +88,9 @@
             }
         }
         
-//        if (!self.captureMultiple) {
-//            [self stop];
-//        }
+       if (!self.captureMultiple) {
+           [self stop];
+       }
     }];
     
 }
