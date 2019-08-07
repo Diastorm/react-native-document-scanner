@@ -84,9 +84,9 @@
             }
         }
         
-        if (!self.captureMultiple) {
-            [self stop];
-        }
+//        if (!self.captureMultiple) {
+//            [self stop];
+//        }
     }];
     
 }
@@ -112,8 +112,12 @@
 }
 
 - (void)cropViewController:(TOCropViewController *)cropViewController didFinishCancelled:(BOOL)cancelled {
-    if (cancelled == NO) {
-        self.onCancel(@{ @placeholder: @1 });
+    if (cancelled == YES) {
+        if (self.onCancel) {
+            self.onCancel(@{@"fp":@1});
+            UIViewController *viewController = [self getMainViewController];
+            [viewController dismissViewControllerAnimated:true completion:^{}];
+        }
     }
 }
 
