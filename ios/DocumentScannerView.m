@@ -113,7 +113,7 @@
 
 - (void)cropViewController:(TOCropViewController *)cropViewController didFinishCancelled:(BOOL)cancelled {
     if (cancelled == NO) {
-        self.onCancel()
+        self.onCancel(@{ placeholder: 'placeholder' })
     }
 }
 
