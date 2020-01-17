@@ -1,5 +1,5 @@
 #import "IPDFCameraViewController.h"
-#import "TOCropViewController.h"
+#import "TOCropViewController/TOCropViewController.h"
 #import <React/RCTViewManager.h>
 
 @interface DocumentScannerView : IPDFCameraViewController <IPDFCameraViewControllerDelegate, TOCropViewControllerDelegate>

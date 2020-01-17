@@ -1,6 +1,6 @@
 #import "DocumentScannerView.h"
 #import "IPDFCameraViewController.h"
-#import "TOCropViewController.h"
+#import "TOCropViewController/TOCropViewController.h"
 
 @implementation DocumentScannerView
 
